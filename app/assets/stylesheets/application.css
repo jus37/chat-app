@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+
+ /* アスタリスクですべての要素に適応させることができる */
+ * { 
+   box-sizing: border-box;
+ }

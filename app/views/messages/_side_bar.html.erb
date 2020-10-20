@@ -1,9 +1,10 @@
 <div class="side-bar-header">
   <div class="header_name">
-    <a href="#">Tom</a>
+    <%= link_to current_user.name,"/users/#{current_user.id}/edit" %>
   </div>
   <div class="create_room">
-    <a href="#">チャットを作成する</a>
+    <%= link_to 'チャットを作成する',"/users/#{current_user.id}/edit" %> 
+    <%# edit_user_path(current_user)でもあり %>
   </div>
 </div>
 

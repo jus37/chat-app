@@ -12,8 +12,9 @@
   <% current_user.rooms.each do |room|%>
     <div class="room">
       <div class="room-name">
-          <a href="#"><%= room.name%></a> 
-          <%# <%= link_to room.name, "#" でも表示は可能%> 
+          <%# <a href= "/rooms/room_id/messages"><%= room.name%></a>  
+          <%= link_to room.name, room_messages_path(room) %>
+          <%# # パスにroomを引数と取ることで、メッセージと紐付いているチャットルームのidをもたせることができる %>
       </div>
     </div>
   <% end %>

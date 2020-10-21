@@ -1,5 +1,8 @@
 class RoomsController < ApplicationController
-
+  
+  def index
+  end
+  
   def new
     @room = Room.new
   end
@@ -18,5 +21,5 @@ class RoomsController < ApplicationController
   def room_params
     params.require(:room).permit(:name, user_ids: []) #user_ids:[]という配列に対して保存を許可している
   end
-  
+
 end

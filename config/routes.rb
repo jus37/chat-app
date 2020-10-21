@@ -3,8 +3,8 @@ Rails.application.routes.draw do
   get 'messages/index'
   root to: "rooms#index"
   resources :users, only: [:edit, :update, :index]
-  resources :rooms, only: [:new, :create] do
-    resources :messages, only: [:index, :create]
+  resources :rooms, only: [:new, :create, :destroy] do
+    resources :messages, only: [:index, :create,]
   end
   #なぜcreateも指定しないとビューファイルが作成できないのか
    #→form_withメソッドの仕組みで保存先もないとパスがわからないから
